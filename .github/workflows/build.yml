@@ -11,19 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          
-      - name: Install Flet
-        run: pip install flet
-        
       - name: Build APK
-        run: flet build apk
-        
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
+        uses: flet-dev/flet-build-action@v1
         with:
-          name: my-app-apk
-          path: build/apk/*.apk
+          target: apk
