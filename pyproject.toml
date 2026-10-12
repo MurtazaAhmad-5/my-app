@@ -1,0 +1,9 @@
+[project]
+name = "my-app"
+version = "0.1.0"
+description = "My First Flet App"
+dependencies = ["flet"]
+
+[tool.flet]
+org = "com.murtaza"
+product = "My First App"
